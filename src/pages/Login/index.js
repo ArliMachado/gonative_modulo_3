@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ActivityIndicator } from 'react-native';
 import { bindActionCreators } from 'redux';
-import * as LoginActions from '~/store/actions/login';
+import { Creators as LoginActions } from '~/store/ducks/login';
 
 import {
   Container, Input, Button, ButtonText, Error,
 } from './styles';
-
-import api from '~/services/api';
 
 class Login extends Component {
   state = { username: '' };
